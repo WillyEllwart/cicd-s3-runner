@@ -1,0 +1,19 @@
+name: CICD
+
+on: 
+    push:
+        branches: [ "main" ]
+
+jobs: 
+    build:
+
+        runs-on: ubuntu-latest
+        
+        steps:
+            - run: echo "Start build process"
+
+            - name: Checkout
+              uses: actions/checkout@v4.2.2
+
+            - run: ls
+        
